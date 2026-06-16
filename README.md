@@ -44,3 +44,6 @@ Aplikasi ini beroperasi menggunakan arsitektur *web-based* tanpa bergantung pada
 <img width="1278" height="907" alt="image" src="https://github.com/user-attachments/assets/110e0261-7a2f-4b0e-8c4f-c335c0d17b03" />
 <img width="1269" height="908" alt="image" src="https://github.com/user-attachments/assets/8ac4c1e3-7b07-43dd-a100-188c1f448485" />
 <img width="1270" height="911" alt="image" src="https://github.com/user-attachments/assets/c7635027-5e76-465c-b722-6ba3616749b1" />
+<img width="1271" height="906" alt="image" src="https://github.com/user-attachments/assets/3241d5af-c2fe-4d01-8552-6cfa5b24de30" />
+<img width="1272" height="912" alt="image" src="https://github.com/user-attachments/assets/84914c7f-ba04-44b6-bcef-828ace5b07a8" />
+<img width="1263" height="904" alt="image" src="https://github.com/user-attachments/assets/e19116a0-acda-46e5-aaef-a54919b7a81b" />
