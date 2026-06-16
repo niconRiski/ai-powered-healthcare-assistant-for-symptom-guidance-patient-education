@@ -1,5 +1,3 @@
-# AI-Powered Healthcare Assistant for Symptom Guidance & Patient Education
-
 # Medika AI: Asisten Kesehatan Bertenaga AI untuk Bimbingan Gejala & Edukasi Pasien
 
 Proyek ini bertujuan untuk mengembangkan asisten perawatan kesehatan bertenaga AI (*Artificial Intelligence*) yang dirancang untuk memberikan panduan diagnosis awal berbasis gejala, tips kesehatan, informasi pengobatan, dan saran perawatan kesehatan pencegahan. 
