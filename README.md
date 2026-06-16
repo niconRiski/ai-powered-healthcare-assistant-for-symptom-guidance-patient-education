@@ -4,7 +4,7 @@ This project aims to develop an AI-powered healthcare assistant designed to prov
 
 **Status:** in_progress
 **Domain:** Healthcare
-**Progress:** 0%
+**Progress:** 
 
 ---
 *Synced from Zaby LMS Capstone Workspace*
