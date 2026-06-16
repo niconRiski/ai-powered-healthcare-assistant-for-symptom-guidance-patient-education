@@ -1,0 +1,2 @@
+# ai-powered-healthcare-assistant-for-symptom-guidance-patient-education
+This project aims to develop an AI-powered healthcare assistant designed to provide users with symptom-based guidance, AI-generated health tips, medication information, and preventive healthcare suggestions. The application leverages large language models (LLMs) to offer informative responses to user queries, promoting health awareness and educatio
