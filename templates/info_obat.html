@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ensiklopedia Obat Lengkap - Medika AI</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/info_style.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="/" class="nav-brand">
+            <span class="material-symbols-outlined" style="color:var(--primary)">health_and_safety</span>
+            <span class="logo-text">Medika AI</span>
+        </a>
+        <div class="nav-links">
+            <a href="/">Beranda</a>
+            <a href="/info-obat-page" style="color:var(--primary); font-weight: 600;">Info Obat</a>
+            <a href="/logout">Logout</a>
+        </div>
+        <div class="nav-user">
+            <span class="material-symbols-outlined">account_circle</span>
+            {{ username }}
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="main-card">
+
+            <!-- Hero -->
+            <div class="hero">
+                <h1>Ensiklopedia Obat Lengkap</h1>
+                <p>Temukan informasi akurat mengenai kegunaan, dosis, efek samping, dan interaksi obat langsung dari
+                    panduan medis terpercaya.</p>
+
+                <div class="search-wrapper">
+                    <span class="material-symbols-outlined">search</span>
+                    <input type="text" id="searchInput" class="search-input"
+                        placeholder="Cari nama obat, kandungan, atau gejala..."
+                        onkeypress="if(event.key === 'Enter') searchObat()">
+                    <button class="search-btn" onclick="searchObat()">
+                        <span id="searchText">Cari</span>
+                        <div class="loader" id="searchLoader"
+                            style="border-top-color: white; width: 16px; height: 16px;"></div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search Result Container -->
+            <div id="searchResult">
+                <div class="flex items-center justify-between"
+                    style="display:flex; justify-content:space-between; margin-bottom: 16px;">
+                    <h3 id="resName" style="margin:0; font-family: 'Orbitron', sans-serif; font-size: 20px;">Hasil
+                        Pencarian</h3>
+                    <button onclick="document.getElementById('searchResult').style.display='none'"
+                        style="background:none; border:none; cursor:pointer;"><span
+                            class="material-symbols-outlined">close</span></button>
+                </div>
+                <div id="resContent" class="ai-result-content"></div>
+            </div>
+
+            <!-- Kategori Obat -->
+            <h2 class="section-title">Kategori Obat</h2>
+            <div class="category-grid">
+                <div class="cat-card" onclick="autoSearch('Antibiotik')">
+                    <div class="cat-icon-wrap"><span class="material-symbols-outlined">medication</span></div>
+                    <span>Antibiotik</span>
+                </div>
+                <div class="cat-card" onclick="autoSearch('Vitamin')">
+                    <div class="cat-icon-wrap"><span class="material-symbols-outlined">monitor_heart</span></div>
+                    <span>Vitamin &<br>Suplemen</span>
+                </div>
+                <div class="cat-card" onclick="autoSearch('Pereda Nyeri')">
+                    <div class="cat-icon-wrap"><span class="material-symbols-outlined">healing</span></div>
+                    <span>Pereda Nyeri</span>
+                </div>
+                <div class="cat-card" onclick="autoSearch('Obat Batuk')">
+                    <div class="cat-icon-wrap"><span class="material-symbols-outlined">water_drop</span></div>
+                    <span>Obat Batuk &<br>Flu</span>
+                </div>
+                <div class="cat-card" onclick="autoSearch('Obat Pencernaan')">
+                    <div class="cat-icon-wrap"><span class="material-symbols-outlined">gastroenterology</span></div>
+                    <span>Pencernaan</span>
+                </div>
+                <div class="cat-card" onclick="autoSearch('Obat Alergi')">
+                    <div class="cat-icon-wrap"><span class="material-symbols-outlined">coronavirus</span></div>
+                    <span>Alergi</span>
+                </div>
+            </div>
+
+            <!-- Obat Populer -->
+            <h2 class="section-title">Obat Populer</h2>
+            <div class="popular-grid">
+                <!-- Card 1 -->
+                <div class="drug-card">
+                    <div class="drug-img-wrapper" style="background:#e0f2fe;">
+                        <span class="drug-badge badge-bebas">Bebas</span>
+                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="Paracetamol">
+                    </div>
+                    <div class="drug-info">
+                        <h3 class="drug-name">Paracetamol 500mg</h3>
+                        <p class="drug-desc">Digunakan untuk meredakan nyeri ringan hingga sedang dan penurun demam.</p>
+                        <div class="drug-dosis">
+                            <div style="flex-shrink:0;">Dosis<br>Umum</div>
+                            <strong>1-2 kaplet / 6-8 jam</strong>
+                        </div>
+                        <button class="btn-outline" onclick="autoSearch('Paracetamol 500mg')">Lihat Detail</button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="drug-card">
+                    <div class="drug-img-wrapper" style="background:#fef3c7;">
+                        <span class="drug-badge badge-resep">Resep Dokter</span>
+                        <img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="Amoxicillin">
+                    </div>
+                    <div class="drug-info">
+                        <h3 class="drug-name">Amoxicillin 500mg</h3>
+                        <p class="drug-desc">Antibiotik penisilin yang digunakan untuk mengobati berbagai infeksi
+                            bakteri.</p>
+                        <div class="drug-dosis">
+                            <div style="flex-shrink:0;">Dosis<br>Umum</div>
+                            <strong>1 kapsul / 8 jam</strong>
+                        </div>
+                        <button class="btn-outline" onclick="autoSearch('Amoxicillin 500mg')">Lihat Detail</button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="drug-card">
+                    <div class="drug-img-wrapper" style="background:#e2e8f0;">
+                        <span class="drug-badge badge-terbatas">Bebas Terbatas</span>
+                        <img src="https://images.unsplash.com/photo-1628771065518-0d82f1938462?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="Cetirizine">
+                    </div>
+                    <div class="drug-info">
+                        <h3 class="drug-name">Cetirizine 10mg</h3>
+                        <p class="drug-desc">Obat antihistamin yang meredakan gejala alergi seperti gatal dan pilek.</p>
+                        <div class="drug-dosis">
+                            <div style="flex-shrink:0;">Dosis<br>Umum</div>
+                            <strong>1 tablet / hari</strong>
+                        </div>
+                        <button class="btn-outline" onclick="autoSearch('Cetirizine 10mg')">Lihat Detail</button>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="drug-card">
+                    <div class="drug-img-wrapper" style="background:#dcfce3;">
+                        <span class="drug-badge badge-bebas">Bebas</span>
+                        <img src="https://images.unsplash.com/photo-1550572017-edb3df417b18?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="Antasida">
+                    </div>
+                    <div class="drug-info">
+                        <h3 class="drug-name">Antasida Doen</h3>
+                        <p class="drug-desc">Digunakan untuk mengurangi gejala yang berhubungan dengan kelebihan asam
+                            lambung.</p>
+                        <div class="drug-dosis">
+                            <div style="flex-shrink:0;">Dosis<br>Umum</div>
+                            <strong>1-2 tab / sebelum makan</strong>
+                        </div>
+                        <button class="btn-outline" onclick="autoSearch('Antasida Doen')">Lihat Detail</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fitur AI -->
+            <div class="ai-features">
+                <!-- Scan Kemasan -->
+                <div class="ai-card">
+                    <div class="ai-header">
+                        <div class="icon-box" style="background:#d1fae5; color:#059669;"><span
+                                class="material-symbols-outlined">document_scanner</span></div>
+                        <h3>Scan Foto Kemasan</h3>
+                    </div>
+                    <p class="ai-desc">Gunakan kamera AI kami untuk memindai kemasan obat fisik dan temukan detailnya
+                        secara otomatis.</p>
+
+                    <div class="scan-area" onclick="document.getElementById('fileScan').click()">
+                        <span class="material-symbols-outlined"
+                            style="font-size: 32px; color: #94a3b8; margin-bottom: 8px;">add_photo_alternate</span>
+                        <div style="font-weight: 500; color: var(--primary);">Pilih atau Drop Gambar</div>
+                        <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">JPG, PNG, WEBP (Maks. 5MB)</div>
+                        <input type="file" id="fileScan" accept="image/*" style="display:none;"
+                            onchange="handleFileScan(this)">
+                    </div>
+
+                    <div id="scanLoaderWrapper" style="display:none; text-align:center; margin-top:16px;">
+                        <div class="loader" style="display:inline-block;"></div>
+                        <div style="font-size: 13px; color: var(--text-muted); margin-top: 8px;">AI sedang menganalisis
+                            gambar...</div>
+                    </div>
+                    <div id="scanResult" class="result-box"></div>
+                </div>
+
+                <!-- Cek Interaksi -->
+                <div class="ai-card">
+                    <div class="ai-header">
+                        <div class="icon-box" style="background:#fee2e2; color:#dc2626;"><span
+                                class="material-symbols-outlined">medical_information</span></div>
+                        <h3>Cek Interaksi Obat</h3>
+                    </div>
+                    <p class="ai-desc">Pastikan kombinasi obat yang Anda konsumsi aman. Masukkan nama-nama obat di bawah
+                        ini.</p>
+
+                    <div class="interaction-inputs">
+                        <input type="text" id="obat1" placeholder="Nama obat pertama (wajib)">
+                        <input type="text" id="obat2" placeholder="Nama obat kedua (wajib)">
+                        <input type="text" id="obat3" placeholder="Nama obat ketiga (opsional)">
+                    </div>
+                    <button class="btn-full" onclick="cekInteraksi()"
+                        style="display:flex; justify-content:center; align-items:center; gap:8px;">
+                        <span id="interaksiText">Cek Keamanan Interaksi</span>
+                        <div class="loader" id="interaksiLoader"
+                            style="border-top-color: white; width: 16px; height: 16px;"></div>
+                    </button>
+                    <div id="interaksiResult" class="result-box"></div>
+                </div>
+            </div>
+
+            <!-- Pengingat Aman Berobat -->
+            <div class="reminder-box">
+                <div class="reminder-header">
+                    <span class="material-symbols-outlined">warning</span>
+                    <h3>Pengingat Aman Berobat</h3>
+                </div>
+
+                <div class="reminder-grid">
+                    <div class="reminder-item">
+                        <div class="reminder-icon">
+                            <span class="material-symbols-outlined"
+                                style="font-size: 32px; color: #ef4444;">alarm</span>
+                        </div>
+                        <div class="reminder-text">
+                            <h4>Minum Sesuai Anjuran</h4>
+                            <p>Selalu ikuti dosis dan waktu minum obat yang diresepkan dokter atau apoteker.</p>
+                        </div>
+                    </div>
+
+                    <div class="reminder-item">
+                        <div class="reminder-icon">
+                            <span class="material-symbols-outlined"
+                                style="font-size: 32px; color: #dc2626;">block</span>
+                        </div>
+                        <div class="reminder-text">
+                            <h4>Hindari Swamedikasi Berlebihan</h4>
+                            <p>Jangan mengonsumsi obat resep tanpa berkonsultasi dengan tenaga medis.</p>
+                        </div>
+                    </div>
+
+                    <div class="reminder-item">
+                        <div class="reminder-icon">
+                            <span class="material-symbols-outlined" style="font-size: 32px; color: #2563eb;">sync</span>
+                        </div>
+                        <div class="reminder-text">
+                            <h4>Periksa Interaksi Obat</h4>
+                            <p>Informasikan semua obat, suplemen, dan herbal yang Anda konsumsi ke dokter.</p>
+                        </div>
+                    </div>
+
+                    <div class="reminder-item">
+                        <div class="reminder-icon">
+                            <span class="material-symbols-outlined"
+                                style="font-size: 32px; color: #d97706;">child_care</span>
+                        </div>
+                        <div class="reminder-text">
+                            <h4>Dosis Anak Berbeda</h4>
+                            <p>Dosis anak-anak sangat berbeda dari dewasa. Gunakan dosis sesuai usia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <!-- Card Animations Script -->
+    <script src="{{ url_for('static', filename='js/info_main.js') }}"></script>
+</body>
+
+</html>

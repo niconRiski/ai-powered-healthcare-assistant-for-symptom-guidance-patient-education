@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Masuk - Medika AI</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="{{ url_for('static', filename='js/tailwind_config.js') }}"></script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Split Screen Layout Container -->
+<div class="flex min-h-screen">
+  
+  <!-- Left Pane: Looping Video Pane (Hidden on Mobile) -->
+  <div class="hidden lg:flex lg:w-1/2 relative bg-surface-container overflow-hidden">
+    <!-- Background Looping Video -->
+<video autoplay muted loop playsinline class="absolute inset-0 h-full w-full object-cover z-0" style="object-fit: cover; transform: translateY(18px) scale(1.1); opacity: 1;">
+<source src="{{ url_for('static', filename='karakterVidio2.mp4') }}" type="video/mp4">
+    </video>
+    
+    <!-- Subtle Gradient Overlay for Depth and Text Readability -->
+    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent mix-blend-multiply z-10"></div>
+    
+    <!-- Branding Context Overlay -->
+    <div class="absolute bottom-0 left-0 p-margin-desktop w-full text-on-primary z-20">
+      <div class="flex items-center gap-xs mb-sm">
+        <span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+        <h2 class="font-headline-md text-headline-md font-bold tracking-tight">Medika AI</h2>
+      </div>
+      <p class="font-body-lg text-body-lg text-on-primary/90 max-w-md">
+        Memberdayakan profesional kesehatan dengan presisi yang empatetik dan kecerdasan buatan tingkat lanjut.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Right Pane: Login Form -->
+  <div class="flex w-full lg:w-1/2 flex-col justify-center bg-surface-container-lowest px-margin-mobile py-12 md:px-margin-desktop lg:px-20 xl:px-32 relative shadow-[0px_0px_24px_rgba(0,82,204,0.05)] lg:shadow-none z-10">
+    <!-- Mobile Logo (Hidden on Desktop) -->
+    <div class="lg:hidden flex items-center gap-xs mb-lg text-primary">
+      <span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+      <h1 class="font-headline-md text-headline-md font-bold tracking-tight">Medika AI</h1>
+    </div>
+    
+    <div class="mx-auto w-full max-w-sm">
+      <!-- Form Header -->
+      <div class="mb-lg">
+        <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-semibold text-on-surface mb-xs">
+          Selamat Datang Kembali
+        </h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">
+          Silakan masukkan kredensial Anda untuk mengakses portal kesehatan.
+        </p>
+      </div>
+      
+      <!-- Error Message (optional) -->
+      {% if error %}
+      <div class="mb-md rounded border border-red-200 bg-red-50 p-3 text-red-700 text-sm" role="alert">
+        {{ error }}
+      </div>
+      {% endif %}
+
+      <!-- Main Form -->
+      <form action="{{ url_for('auth') }}" class="space-y-md" method="POST" id="login-form">
+        <!-- Username/Email Field -->
+        <div>
+          <label class="block font-label-md text-label-md text-on-surface mb-xs" for="username">
+            Nama Pengguna / Email
+          </label>
+          <div class="relative mt-1">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <span class="material-symbols-outlined text-outline text-[20px]">person</span>
+            </div>
+            <input autocomplete="username" class="block w-full pl-10 rounded-DEFAULT border-outline-variant bg-surface-container-lowest py-2.5 px-3 font-body-md text-body-md text-on-surface placeholder:text-outline/60 shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors duration-200" id="username" name="username" placeholder="contoh: budi" required="" type="text"/>
+          </div>
+        </div>
+        
+        <!-- Password Field -->
+        <div>
+          <label class="block font-label-md text-label-md text-on-surface mb-xs" for="password">
+            Kata Sandi
+          </label>
+          <div class="relative mt-1">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <span class="material-symbols-outlined text-outline text-[20px]">lock</span>
+            </div>
+            <input autocomplete="current-password" class="block w-full pl-10 rounded-DEFAULT border-outline-variant bg-surface-container-lowest py-2.5 px-3 font-body-md text-body-md text-on-surface placeholder:text-outline/60 shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors duration-200" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+            <button id="toggle-password" class="absolute inset-y-0 right-0 pr-3 flex items-center text-outline hover:text-on-surface transition-colors" type="button">
+              <span class="material-symbols-outlined text-[20px]">visibility_off</span>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Additional Options Row -->
+        <div class="flex items-center justify-end">
+          <div class="text-sm">
+            <a class="font-label-md text-label-md text-primary hover:underline hover:text-primary-fixed-variant transition-colors duration-200" href="{{ url_for('forgot_password') }}">
+              Lupa Kata Sandi?
+            </a>
+          </div>
+        </div>
+        
+        
+        <!-- Submit Button -->
+        <div>
+          <button class="flex w-full justify-center items-center gap-2 rounded-DEFAULT bg-primary px-4 py-3 font-label-md text-label-md text-on-primary shadow-[0px_4px_12px_rgba(0,82,204,0.15)] hover:bg-primary-container focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all duration-200 active:scale-[0.98] border-none cursor-pointer" type="submit">
+            Masuk
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </button>
+        </div>
+      </form>
+      
+      <!-- Signup Prompt -->
+      <div class="mt-lg pt-md border-t border-outline-variant/30 text-center">
+        <p class="font-body-sm text-body-sm text-on-surface-variant">
+          Belum memiliki akun? 
+          <a class="font-label-md text-label-md text-primary hover:underline hover:text-primary-fixed-variant transition-colors" href="{{ url_for('register') }}">
+            Daftar Akun Baru
+          </a>
+
+        </p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<script>
+  // Fitur fungsional tambahan untuk Show/Hide Password
+  const togglePasswordBtn = document.getElementById('toggle-password');
+  const passwordInput = document.getElementById('password');
+
+  if (togglePasswordBtn && passwordInput) {
+    togglePasswordBtn.addEventListener('click', () => {
+      const isPassword = passwordInput.getAttribute('type') === 'password';
+      passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+      
+      const iconSpan = togglePasswordBtn.querySelector('span');
+      if (iconSpan) {
+        iconSpan.textContent = isPassword ? 'visibility' : 'visibility_off';
+      }
+    });
+  }
+</script>
+  <!-- Card Animations Script -->
+  <script src="{{ url_for('static', filename='js/card_animations.js') }}"></script>
+</body>
+</html>

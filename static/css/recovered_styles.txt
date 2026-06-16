@@ -1,0 +1,1774 @@
+﻿
+> D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3037:      <!-- ── 
+INLINE STYLES FOR THIS SECTION ── -->
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3038:      <style>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3039:        /* ── 
+SC = Symptom Checker namespace ── */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3040:        
+.sc-container {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3041:          
+max-width: 1100px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3042:          
+margin: 0 auto;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3043:          
+padding: 1.75rem 1.5rem 3rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3044:          
+display: flex;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3045:          
+flex-direction: column;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3046:          
+gap: 2rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3047:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3048:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3049:        
+.sc-glass {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3050:          
+background: rgba(255, 255, 255, 0.92);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3051:          
+border: 1.5px solid rgba(196, 210, 255, 0.6);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3052:          
+border-radius: 24px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3053:          
+box-shadow: 0 8px 32px rgba(0, 82, 204, 0.07), 0 2px 8px rgba(0, 0, 0, 0.04);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3054:          
+backdrop-filter: blur(16px);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3055:          
+-webkit-backdrop-filter: blur(16px);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3056:          
+padding: 2rem 2.25rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3057:          
+transition: box-shadow 0.25s;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3058:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3059:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3060:        
+.sc-glass:hover {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3061:          
+box-shadow: 0 12px 40px rgba(0, 82, 204, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3062:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3063:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3064:        /* 
+Dark Mode Overrides for Gejala Cards */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3065:        
+body.dark-theme #tab-gejala .sc-glass,
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3066:        
+body.dark-theme #tab-gejala .sc-condition-card,
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3067:        
+body.dark-theme #tab-gejala .sc-reco-card,
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3068:        
+body.dark-theme #tab-gejala .sc-question-card {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3069:          
+background: rgba(15, 23, 42, 0.85) !important;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3070:          
+border-color: rgba(255, 255, 255, 0.1) !important;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3071:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3072:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3073:        
+body.dark-theme #tab-gejala .sc-glass *,
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3074:        
+body.dark-theme #tab-gejala .sc-condition-card *,
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3075:        
+body.dark-theme #tab-gejala .sc-reco-card *,
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3076:        
+body.dark-theme #tab-gejala .sc-question-card * {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3077:          
+color: #f8fafc !important;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3078:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3079:        
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3080:        
+body.dark-theme #tab-gejala .sc-condition-name {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3081:          
+color: #ffffff !important;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3082:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3083:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3084:        
+.sc-section-header {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3085:          
+display: flex;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3086:          
+align-items: center;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3087:          
+gap: .875rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3088:          
+margin-bottom: 1.5rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3089:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3090:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3091:        
+.sc-icon-box {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3092:          
+width: 44px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3093:          
+height: 44px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3094:          
+border-radius: 12px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3095:          
+background: linear-gradient(135deg, #0052cc, #2563eb);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3096:          
+display: flex;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3097:          
+align-items: center;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3098:          
+justify-content: center;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3099:          
+flex-shrink: 0;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3100:          
+box-shadow: 0 4px 12px rgba(0, 82, 204, 0.3);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3101:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3102:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3103:        
+.sc-section-title {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3104:          
+font-family: 'Outfit', sans-serif;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3105:          
+font-size: 1.1rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3106:          
+font-weight: 800;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3107:          
+color: #0b1c30;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3108:          
+margin: 0;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3109:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3110:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3111:        
+.sc-section-sub {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3112:          
+font-size: 12px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3113:          
+color: #526069;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3114:          
+margin: 0;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3115:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3116:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3117:        /* 
+Hero Banner */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3118:        
+.sc-hero {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3119:          
+background: linear-gradient(135deg, #0b1628 0%, #0052cc 55%, #1e40af 100%);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3120:          
+border-radius: 24px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3121:          
+padding: 2.5rem 2.75rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3122:          
+position: relative;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3123:          
+overflow: hidden;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3124:          
+color: white;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3125:          
+box-shadow: 0 12px 40px rgba(0, 82, 204, 0.35);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3126:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3127:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3128:        
+.sc-hero::before {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3129:          
+content: '';
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3130:          
+position: absolute;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3131:          
+top: -60px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3132:          
+right: -60px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3133:          
+width: 260px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3134:          
+height: 260px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3135:          
+background: rgba(255, 255, 255, 0.05);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3136:          
+border-radius: 50%;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3137:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3138:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3139:        
+.sc-hero::after {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3140:          
+content: '';
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3141:          
+position: absolute;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3142:          
+bottom: -40px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3143:          
+left: 30%;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3144:          
+width: 180px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3145:          
+height: 180px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3146:          
+background: rgba(0, 229, 255, 0.07);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3147:          
+border-radius: 50%;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3148:          
+filter: blur(30px);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3149:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3150:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3151:        
+.sc-hero-badge {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3152:          
+display: inline-flex;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3153:          
+align-items: center;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3154:          
+gap: 6px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3155:          
+padding: 4px 14px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3156:          
+background: rgba(0, 229, 255, 0.15);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3157:          
+border: 1px solid rgba(0, 229, 255, 0.35);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3158:          
+border-radius: 99px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3159:          
+font-size: 11px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3160:          
+font-weight: 700;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3161:          
+color: #7ee5d5;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3162:          
+letter-spacing: .06em;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3163:          
+text-transform: uppercase;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3164:          
+margin-bottom: 1rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3165:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3166:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3167:        
+.sc-hero-badge::before {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3168:          
+content: '';
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3169:          
+width: 6px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3170:          
+height: 6px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3171:          
+border-radius: 50%;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3172:          
+background: #7ee5d5;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3173:          
+animation: blink 1.5s infinite;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3174:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3175:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3176:        /* 
+Emergency Banner */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3177:        
+.sc-emergency {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3178:          
+display: none;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3179:          
+background: linear-gradient(135deg, #dc2626, #b91c1c);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3180:          
+border-radius: 16px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3181:          
+padding: 1.25rem 1.5rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3182:          
+border: 2px solid #ef4444;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3183:          
+animation: scFadeIn .4s ease;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3184:          
+box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.2);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3185:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3186:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3187:        
+.sc-emergency.visible {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3188:          
+display: block;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3189:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3190:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3191:        /* 
+Profile Grid */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3192:        
+.sc-profile-grid {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3193:          
+display: grid;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3194:          
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3195:          
+gap: 1rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3196:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3197:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3198:        
+.sc-form-group {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3199:          
+display: flex;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3200:          
+flex-direction: column;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3201:          
+gap: .5rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3202:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3203:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3204:        
+.sc-label {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3205:          
+font-size: 11px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3206:          
+font-weight: 800;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3207:          
+color: #737685;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3208:          
+text-transform: uppercase;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3209:          
+letter-spacing: .08em;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3210:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3211:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3212:        
+.sc-input {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3213:          
+background: #f8faff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3214:          
+border: 1.5px solid #c3c6d6;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3215:          
+border-radius: 12px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3216:          
+padding: .75rem 1rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3217:          
+font-size: 13px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3218:          
+color: #0b1c30;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3219:          
+outline: none;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3220:          
+transition: all .2s;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3221:          
+font-family: 'Outfit', sans-serif;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3222:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3223:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3224:        
+.sc-input:focus {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3225:          
+border-color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3226:          
+background: #fff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3227:          
+box-shadow: 0 0 0 3px rgba(0, 82, 204, 0.1);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3228:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3229:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3230:        
+.sc-select {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3231:          
+cursor: pointer;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3232:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3233:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3234:        
+.sc-radio-group {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3235:          
+display: flex;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3236:          
+gap: .625rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3237:          
+flex-wrap: wrap;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3238:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3239:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3240:        
+.sc-radio-btn {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3241:          
+padding: .5rem 1rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3242:          
+background: #f8faff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3243:          
+border: 1.5px solid #c3c6d6;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3244:          
+border-radius: 99px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3245:          
+font-size: 12px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3246:          
+font-weight: 700;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3247:          
+color: #526069;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3248:          
+cursor: pointer;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3249:          
+transition: all .2s;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3250:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3251:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3252:        
+.sc-radio-btn.active,
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3253:        
+.sc-radio-btn:hover {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3254:          
+background: rgba(0, 82, 204, 0.08);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3255:          
+border-color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3256:          
+color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3257:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3258:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3259:        
+.sc-checkbox-group {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3260:          
+display: flex;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3261:          
+flex-wrap: wrap;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3262:          
+gap: .625rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3263:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3264:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3265:        
+.sc-checkbox-btn {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3266:          
+padding: .5rem 1rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3267:          
+background: #f8faff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3268:          
+border: 1.5px solid #c3c6d6;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3269:          
+border-radius: 10px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3270:          
+font-size: 12px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3271:          
+font-weight: 600;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3272:          
+color: #526069;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3273:          
+cursor: pointer;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3274:          
+transition: all .2s;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3275:          
+display: flex;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3276:          
+align-items: center;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3277:          
+gap: .375rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3278:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3279:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3280:        
+.sc-checkbox-btn.checked {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3281:          
+background: rgba(0, 82, 204, 0.08);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3282:          
+border-color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3283:          
+color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3284:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3285:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3286:        
+.sc-checkbox-btn.checked::before {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3287:          
+content: '✓ ';
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3288:          
+font-weight: 900;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3289:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3290:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3291:        /* 
+Category Tabs */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3292:        
+.sc-cat-tabs {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3293:          
+display: flex;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3294:          
+flex-wrap: wrap;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3295:          
+gap: .5rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3296:          
+margin-bottom: 1.25rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3297:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3298:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3299:        
+.sc-cat-tab {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3300:          
+padding: .5rem 1.1rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3301:          
+border-radius: 99px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3302:          
+font-size: 12px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3303:          
+font-weight: 700;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3304:          
+border: 1.5px solid #e5eefc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3305:          
+background: #fff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3306:          
+color: #526069;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3307:          
+cursor: pointer;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3308:          
+transition: all .2s;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3309:          
+display: flex;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3310:          
+align-items: center;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3311:          
+gap: .375rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3312:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3313:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3314:        
+.sc-cat-tab.active {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3315:          
+background: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3316:          
+border-color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3317:          
+color: #fff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3318:          
+box-shadow: 0 4px 12px rgba(0, 82, 204, 0.25);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3319:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3320:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3321:        
+.sc-cat-tab:hover:not(.active) {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3322:          
+border-color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3323:          
+color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3324:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3325:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3326:        /* 
+Symptom Grid */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3327:        
+.sc-symptom-grid {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3328:          
+display: grid;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3329:          
+grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3330:          
+gap: .625rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3331:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3332:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3333:        
+.sc-symptom-btn {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3334:          
+background: #f8faff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3335:          
+border: 1.5px solid #e5eefc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3336:          
+border-radius: 12px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3337:          
+padding: .625rem .875rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3338:          
+font-size: 12px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3339:          
+font-weight: 600;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3340:          
+color: #526069;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3341:          
+cursor: pointer;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3342:          
+transition: all .2s;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3343:          
+text-align: left;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3344:          
+display: flex;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3345:          
+align-items: center;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3346:          
+gap: .5rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3347:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3348:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3349:        
+.sc-symptom-btn:hover {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3350:          
+border-color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3351:          
+color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3352:          
+background: rgba(0, 82, 204, 0.05);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3353:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3354:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3355:        
+.sc-symptom-btn.selected {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3356:          
+background: rgba(0, 82, 204, 0.1);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3357:          
+border-color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3358:          
+color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3359:          
+font-weight: 700;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3360:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3361:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3362:        /* 
+Duration Selector */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3363:        
+.sc-duration-grid {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3364:          
+display: grid;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3365:          
+grid-template-columns: repeat(2, 1fr);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3366:          
+gap: .625rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3367:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3368:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3369:        
+@media(min-width:480px) {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3370:          
+.sc-duration-grid {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3371:            
+grid-template-columns: repeat(4, 1fr);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3372:          }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3373:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3374:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3375:        
+.sc-dur-btn {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3376:          
+padding: .75rem .5rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3377:          
+background: #f8faff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3378:          
+border: 1.5px solid #e5eefc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3379:          
+border-radius: 12px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3380:          
+font-size: 12px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3381:          
+font-weight: 700;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3382:          
+color: #526069;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3383:          
+cursor: pointer;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3384:          
+transition: all .2s;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3385:          
+text-align: center;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3386:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3387:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3388:        
+.sc-dur-btn.selected {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3389:          
+background: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3390:          
+border-color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3391:          
+color: #fff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3392:          
+box-shadow: 0 4px 12px rgba(0, 82, 204, 0.25);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3393:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3394:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3395:        /* 
+Severity */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3396:        
+.sc-severity-track {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3397:          
+position: relative;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3398:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3399:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3400:        
+.sc-severity-labels {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3401:          
+display: flex;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3402:          
+justify-content: space-between;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3403:          
+font-size: 11px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3404:          
+color: #737685;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3405:          
+font-weight: 700;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3406:          
+margin-top: .375rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3407:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3408:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3409:        
+.sc-sev-value {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3410:          
+font-family: 'Outfit', sans-serif;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3411:          
+font-size: 2rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3412:          
+font-weight: 900;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3413:          
+color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3414:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3415:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3416:        /* 
+Upload Zone */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3417:        
+.sc-upload-zone {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3418:          
+border: 2px dashed #c3d9ff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3419:          
+border-radius: 16px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3420:          
+padding: 2rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3421:          
+text-align: center;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3422:          
+background: #f8faff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3423:          
+cursor: pointer;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3424:          
+transition: all .2s;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3425:          
+position: relative;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3426:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3427:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3428:        
+.sc-upload-zone:hover,
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3429:        
+.sc-upload-zone.drag-over {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3430:          
+border-color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3431:          
+background: rgba(0, 82, 204, 0.04);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3432:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3433:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3434:        
+.sc-upload-preview {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3435:          
+display: none;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3436:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3437:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3438:        
+.sc-upload-preview.has-image {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3439:          
+display: block;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3440:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3441:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3442:        /* 
+Follow-up Questions */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3443:        
+.sc-followup {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3444:          
+display: none;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3445:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3446:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3447:        
+.sc-followup.visible {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3448:          
+display: flex;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3449:          
+flex-direction: column;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3450:          
+gap: 1rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3451:          
+animation: scFadeIn .4s ease;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3452:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3453:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3454:        
+.sc-question-card {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3455:          
+background: #f8faff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3456:          
+border: 1.5px solid #e5eefc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3457:          
+border-radius: 14px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3458:          
+padding: 1rem 1.25rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3459:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3460:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3461:        
+.sc-question-text {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3462:          
+font-size: 13px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3463:          
+font-weight: 700;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3464:          
+color: #0b1c30;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3465:          
+margin-bottom: .625rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3466:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3467:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3468:        
+.sc-answer-row {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3469:          
+display: flex;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3470:          
+gap: .625rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3471:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3472:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3473:        
+.sc-answer-btn {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3474:          
+flex: 1;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3475:          
+padding: .625rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3476:          
+background: #fff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3477:          
+border: 1.5px solid #c3c6d6;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3478:          
+border-radius: 10px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3479:          
+font-size: 12px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3480:          
+font-weight: 700;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3481:          
+cursor: pointer;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3482:          
+transition: all .2s;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3483:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3484:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3485:        
+.sc-answer-btn.yes.selected {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3486:          
+background: #dcfce7;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3487:          
+border-color: #22c55e;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3488:          
+color: #166534;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3489:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3490:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3491:        
+.sc-answer-btn.no.selected {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3492:          
+background: #fee2e2;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3493:          
+border-color: #ef4444;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3494:          
+color: #991b1b;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3495:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3496:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3497:        
+.sc-answer-btn:hover {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3498:          
+border-color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3499:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3500:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3501:        /* 
+Result Dashboard */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3502:        
+.sc-result {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3503:          
+display: none;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3504:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3505:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3506:        
+.sc-result.visible {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3507:          
+display: flex;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3508:          
+flex-direction: column;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3509:          
+gap: 1.5rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3510:          
+animation: scFadeIn .5s ease;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3511:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3512:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3513:        /* 
+Condition Cards */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3514:        
+.sc-condition-card {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3515:          
+background: #fff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3516:          
+border: 1.5px solid #e5eefc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3517:          
+border-radius: 14px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3518:          
+padding: 1rem 1.25rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3519:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3520:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3521:        
+.sc-condition-header {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3522:          
+display: flex;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3523:          
+align-items: center;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3524:          
+justify-content: space-between;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3525:          
+margin-bottom: .5rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3526:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3527:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3528:        
+.sc-condition-name {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3529:          
+font-size: 14px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3530:          
+font-weight: 800;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3531:          
+color: #0b1c30;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3532:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3533:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3534:        
+.sc-condition-pct {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3535:          
+font-family: 'Outfit', sans-serif;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3536:          
+font-size: 1.25rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3537:          
+font-weight: 900;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3538:          
+color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3539:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3540:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3541:        
+.sc-progress-bar {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3542:          
+width: 100%;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3543:          
+height: 8px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3544:          
+background: #e5eefc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3545:          
+border-radius: 99px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3546:          
+overflow: hidden;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3547:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3548:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3549:        
+.sc-progress-fill {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3550:          
+height: 100%;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3551:          
+border-radius: 99px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3552:          
+background: linear-gradient(90deg, #0052cc, #06b6d4);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3553:          
+transition: width 1s cubic-bezier(.4, 0, .2, 1);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3554:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3555:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3556:        /* 
+Risk Gauge */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3557:        
+.sc-risk-gauge {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3558:          
+display: flex;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3559:          
+flex-direction: column;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3560:          
+align-items: center;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3561:          
+padding: 1.5rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3562:          
+background: linear-gradient(160deg, #fff 60%, #eff4ff);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3563:          
+border-radius: 16px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3564:          
+border: 1.5px solid #e5eefc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3565:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3566:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3567:        
+.sc-risk-dot {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3568:          
+width: 18px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3569:          
+height: 18px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3570:          
+border-radius: 50%;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3571:          
+display: inline-block;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3572:          
+margin-right: .375rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3573:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3574:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3575:        /* 
+Recommendation Cards */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3576:        
+.sc-reco-grid {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3577:          
+display: grid;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3578:          
+grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3579:          
+gap: .875rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3580:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3581:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3582:        
+.sc-reco-card {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3583:          
+background: #fff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3584:          
+border: 1.5px solid #e5eefc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3585:          
+border-radius: 14px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3586:          
+padding: 1rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3587:          
+transition: all .2s;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3588:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3589:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3590:        
+.sc-reco-card:hover {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3591:          
+border-color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3592:          
+box-shadow: 0 4px 16px rgba(0, 82, 204, 0.1);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3593:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3594:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3595:        
+.sc-reco-icon {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3596:          
+font-size: 1.5rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3597:          
+margin-bottom: .5rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3598:          
+display: block;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3599:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3600:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3601:        
+.sc-reco-text {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3602:          
+font-size: 12px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3603:          
+font-weight: 700;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3604:          
+color: #0b1c30;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3605:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3606:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3607:        /* 
+When-to-Doctor Card */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3608:        
+.sc-warn-card {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3609:          
+background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3610:          
+border: 1.5px solid #fde68a;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3611:          
+border-radius: 16px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3612:          
+padding: 1.25rem 1.5rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3613:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3614:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3615:        /* 
+Facilities */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3616:        
+.sc-facility-grid {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3617:          
+display: grid;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3618:          
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3619:          
+gap: 1rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3620:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3621:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3622:        
+.sc-facility-card {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3623:          
+background: #fff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3624:          
+border: 1.5px solid #e5eefc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3625:          
+border-radius: 16px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3626:          
+padding: 1.25rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3627:          
+transition: all .2s;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3628:          
+cursor: pointer;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3629:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3630:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3631:        
+.sc-facility-card:hover {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3632:          
+border-color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3633:          
+box-shadow: 0 6px 20px rgba(0, 82, 204, 0.1);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3634:          
+transform: translateY(-2px);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3635:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3636:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3637:        
+.sc-facility-type {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3638:          
+font-size: 10px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3639:          
+font-weight: 800;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3640:          
+color: #737685;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3641:          
+text-transform: uppercase;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3642:          
+letter-spacing: .08em;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3643:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3644:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3645:        
+.sc-facility-name {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3646:          
+font-size: 15px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3647:          
+font-weight: 800;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3648:          
+color: #0b1c30;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3649:          
+margin: .25rem 0 .375rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3650:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3651:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3652:        
+.sc-facility-dist {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3653:          
+font-size: 12px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3654:          
+color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3655:          
+font-weight: 700;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3656:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3657:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3658:        
+.sc-appt-btn {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3659:          
+margin-top: .875rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3660:          
+width: 100%;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3661:          
+padding: .625rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3662:          
+background: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3663:          
+color: #fff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3664:          
+border: none;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3665:          
+border-radius: 10px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3666:          
+font-size: 12px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3667:          
+font-weight: 800;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3668:          
+cursor: pointer;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3669:          
+transition: all .2s;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3670:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3671:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3672:        
+.sc-appt-btn:hover {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3673:          
+background: #003e9e;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3674:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3675:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3676:        /* 
+Prevention link card */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3677:        
+.sc-prevention-card {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3678:          
+background: linear-gradient(135deg, #0052cc, #2563eb);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3679:          
+border-radius: 16px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3680:          
+padding: 1.5rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3681:          
+color: #fff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3682:          
+position: relative;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3683:          
+overflow: hidden;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3684:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3685:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3686:        
+.sc-prevention-card::after {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3687:          
+content: '';
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3688:          
+position: absolute;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3689:          
+right: -30px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3690:          
+top: -30px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3691:          
+width: 140px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3692:          
+height: 140px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3693:          
+background: rgba(255, 255, 255, 0.07);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3694:          
+border-radius: 50%;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3695:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3696:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3697:        
+.sc-prevention-btn {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3698:          
+margin-top: .75rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3699:          
+padding: .625rem 1.25rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3700:          
+background: rgba(255, 255, 255, 0.15);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3701:          
+color: #fff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3702:          
+border: 1.5px solid rgba(255, 255, 255, 0.35);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3703:          
+border-radius: 10px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3704:          
+font-size: 12px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3705:          
+font-weight: 700;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3706:          
+cursor: pointer;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3707:          
+transition: all .2s;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3708:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3709:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3710:        
+.sc-prevention-btn:hover {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3711:          
+background: rgba(255, 255, 255, 0.25);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3712:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3713:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3714:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3715:        /* AI 
+Insight */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3716:        
+.sc-insight-card {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3717:          
+background: linear-gradient(135deg, #0b1628, #0052cc);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3718:          
+border-radius: 20px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3719:          
+padding: 2rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3720:          
+color: #fff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3721:          
+position: relative;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3722:          
+overflow: hidden;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3723:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3724:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3725:        
+.sc-insight-grid {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3726:          
+display: grid;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3727:          
+grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3728:          
+gap: .75rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3729:          
+margin-top: 1.25rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3730:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3731:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3732:        
+.sc-insight-metric {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3733:          
+background: rgba(255, 255, 255, 0.1);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3734:          
+border-radius: 12px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3735:          
+padding: .75rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3736:          
+text-align: center;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3737:          
+border: 1px solid rgba(255, 255, 255, 0.15);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3738:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3739:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3740:        
+.sc-insight-value {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3741:          
+font-family: 'Outfit', sans-serif;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3742:          
+font-size: 1.25rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3743:          
+font-weight: 900;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3744:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3745:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3746:        
+.sc-insight-label {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3747:          
+font-size: 10px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3748:          
+color: rgba(255, 255, 255, 0.7);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3749:          
+font-weight: 700;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3750:          
+text-transform: uppercase;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3751:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3752:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3753:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3754:        /* 
+Analyze Btn */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3755:        
+.sc-analyze-btn {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3756:          
+padding: 1rem 2.5rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3757:          
+background: linear-gradient(135deg, #0052cc, #2563eb);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3758:          
+color: #fff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3759:          
+border: none;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3760:          
+border-radius: 16px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3761:          
+font-family: 'Outfit', sans-serif;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3762:          
+font-size: 15px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3763:          
+font-weight: 900;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3764:          
+cursor: pointer;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3765:          
+display: flex;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3766:          
+align-items: center;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3767:          
+gap: .75rem;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3768:          
+box-shadow: 0 8px 24px rgba(0, 82, 204, 0.3);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3769:          
+transition: all .25s;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3770:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3771:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3772:        
+.sc-analyze-btn:hover {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3773:          
+transform: translateY(-2px);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3774:          
+box-shadow: 0 12px 30px rgba(0, 82, 204, 0.4);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3775:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3776:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3777:        
+.sc-analyze-btn:disabled {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3778:          
+background: #cbd5e1;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3779:          
+cursor: not-allowed;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3780:          
+box-shadow: none;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3781:          
+transform: none;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3782:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3783:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3784:        /* 
+Animations */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3785:        
+@keyframes scFadeIn {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3786:          
+from {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3787:            
+opacity: 0;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3788:            
+transform: translateY(12px);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3789:          }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3790:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3791:          to {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3792:            
+opacity: 1;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3793:            
+transform: translateY(0);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3794:          }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3795:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3796:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3797:        
+.sc-fade-in {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3798:          
+animation: scFadeIn .45s ease both;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3799:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3800:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3801:        /* 
+Loading spinner */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3802:        
+.sc-spinner {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3803:          
+width: 20px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3804:          
+height: 20px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3805:          
+border: 3px solid rgba(255, 255, 255, 0.3);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3806:          
+border-top-color: #fff;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3807:          
+border-radius: 50%;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3808:          
+animation: putar .7s linear infinite;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3809:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3810:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3811:        
+.sc-dark-spinner {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3812:          
+width: 20px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3813:          
+height: 20px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3814:          
+border: 3px solid rgba(0, 82, 204, 0.15);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3815:          
+border-top-color: #0052cc;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3816:          
+border-radius: 50%;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3817:          
+animation: putar .7s linear infinite;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3818:        }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3819:    
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3820:    /* MENTAL 
+HEALTH CHECK (MHC) CSS */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3821:    
+.mhc-option-btn {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3822:        
+width: 100%; text-align: left; padding: 1rem 1.25rem; border-radius: 12px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3823:        
+background: #f8fafc; border: 1px solid #e2e8f0; color: #334155;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3824:        
+font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3825:        
+display: flex; align-items: center; justify-content: space-between;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3826:    }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3827:    
+.mhc-option-btn:hover {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3828:        
+background: #eff6ff; border-color: #bfdbfe; color: #1d4ed8; transform: translateY(-1px);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3829:    }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3830:    
+body.dark-theme .mhc-option-btn {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3831:        
+background: rgba(30, 41, 59, 0.5); border-color: rgba(255, 255, 255, 0.05); color: #cbd5e1;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3832:    }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3833:    
+body.dark-theme .mhc-option-btn:hover {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3834:        
+background: rgba(15, 23, 42, 0.8); border-color: rgba(56, 189, 248, 0.3); color: #38bdf8;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3835:    }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3836:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3837:    
+.mhc-progress-circle {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3838:        
+width: 120px; height: 120px; border-radius: 50%;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3839:        
+display: flex; align-items: center; justify-content: center;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3840:        
+background: conic-gradient(#3b82f6 var(--p), #e2e8f0 0);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3841:        
+position: relative;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3842:    }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3843:    
+body.dark-theme .mhc-progress-circle {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3844:        
+background: conic-gradient(#38bdf8 var(--p), #1e293b 0);
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3845:    }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3846:    
+.mhc-progress-inner {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3847:        
+width: 100px; height: 100px; border-radius: 50%;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3848:        
+background: white; display: flex; flex-direction: column;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3849:        
+align-items: center; justify-content: center;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3850:    }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3851:    
+body.dark-theme .mhc-progress-inner { background: #0f172a; }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3852:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3853:    
+.mhc-bar-wrapper {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3854:        
+display: flex; align-items: flex-end; justify-content: space-between;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3855:        
+height: 120px; gap: 8px; margin-top: 1rem; padding-bottom: 24px; position: relative;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3856:    }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3857:    
+.mhc-bar-col {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3858:        flex: 
+1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 4px; height: 100%;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3859:    }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3860:    .mhc-bar {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3861:        
+width: 100%; background: #bfdbfe; border-radius: 4px; transition: height 1s ease-out; min-height: 4px;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3862:    }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3863:    
+body.dark-theme .mhc-bar { background: #1e3a8a; }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3864:    
+.mhc-bar.active { background: #3b82f6; }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3865:    
+body.dark-theme .mhc-bar.active { background: #38bdf8; }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3866:    
+.mhc-bar-label {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3867:        
+font-size: 10px; color: #64748b; font-weight: 600; text-align: center;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3868:        
+position: absolute; bottom: 0; width: 100%;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3869:    }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3870:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3871:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3872:    /* MHC 
+Card Dark Mode Override */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3873:    
+body.dark-theme .mhc-card {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3874:        
+background: rgba(30, 41, 59, 0.85) !important; /* Slate 800 */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3875:        
+background-image: none !important;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3876:        
+border-color: rgba(255, 255, 255, 0.1) !important;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3877:    }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3878:    
+body.dark-theme .mhc-card h2, body.dark-theme .mhc-card p {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3879:        
+color: #ffffff !important;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3880:    }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3881:    
+body.dark-theme .mhc-card .w-16 {
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3882:        
+background: #334155 !important; /* Slate 700 */
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3883:        
+border-color: #475569 !important;
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3884:    }
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3885:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3886:  </style>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3887:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3888:      <div 
+class="sc-container">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3889:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3890:        <!-- 
+══ HERO HEADER ══════════════════════════════════════════ -->
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3891:        <div 
+class="sc-hero sc-fade-in">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3892:          
+<div style="position:relative; z-index:1;">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3893:            
+<div class="sc-hero-badge">AI Symptom Checker</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3894:            
+<h1
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3895:              
+style="font-family:'Orbitron',sans-serif; font-size:clamp(1.5rem,4vw,2.5rem); font-weight:800; color:#fff; margin:0 0 
+.5rem; text-shadow:0 2px 20px rgba(0,0,0,0.4);">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3896:              
+Cek Gejala <span style="color:#7ee5d5;">Anda</span>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3897:            
+</h1>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3898:            <p
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3899:              
+style="font-size:14px; color:rgba(255,255,255,0.82); max-width:520px; line-height:1.65; margin:0 0 1.5rem;">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3900:              
+Ceritakan kondisi Anda dan biarkan AI menganalisis — dari profil pasien, gejala, hingga rekomendasi medis
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3901:              
+personal.
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3902:            
+</p>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3903:            
+<div style="display:flex; gap:.875rem; flex-wrap:wrap; align-items:center;">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3904:              
+<div
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3905:              
+  style="display:flex; align-items:center; gap:.5rem; padding:.5rem 1rem; background:rgba(255,255,255,0.1); 
+border-radius:99px; border:1px solid rgba(255,255,255,0.2); font-size:12px; color:rgba(255,255,255,0.9); 
+font-weight:700;">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3906:              
+  <span class="material-symbols-outlined" style="font-size:16px; color:#7ee5d5;">verified</span> Berbasis
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3907:              
+  AI Medis
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3908:              
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3909:              
+<div
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3910:              
+  style="display:flex; align-items:center; gap:.5rem; padding:.5rem 1rem; background:rgba(255,255,255,0.1); 
+border-radius:99px; border:1px solid rgba(255,255,255,0.2); font-size:12px; color:rgba(255,255,255,0.9); 
+font-weight:700;">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3911:              
+  <span class="material-symbols-outlined" style="font-size:16px; color:#7ee5d5;">shield_lock</span> Data
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3912:              
+  Aman & Privat
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3913:              
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3914:              
+<div
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3915:              
+  style="display:flex; align-items:center; gap:.5rem; padding:.5rem 1rem; background:rgba(255,255,255,0.1); 
+border-radius:99px; border:1px solid rgba(255,255,255,0.2); font-size:12px; color:rgba(255,255,255,0.9); 
+font-weight:700;">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3916:              
+  <span class="material-symbols-outlined" style="font-size:16px; color:#7ee5d5;">timer</span> Hasil Instan
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3917:              
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3918:            
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3919:          
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3920:        </div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3921:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3922:        <!-- 
+══ EMERGENCY BANNER ═══════════════════════════════════ -->
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3923:        <div 
+id="sc-emergency-banner" class="sc-emergency">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3924:          
+<div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3925:            
+<span style="font-size:2rem;">🚨</span>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3926:            
+<div style="flex:1;">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3927:              
+<p style="font-size:18px; font-weight:900; color:#fff; margin:0 0 .25rem;">DARURAT MEDIS TERDETEKSI</p>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3928:              
+<p style="font-size:13px; color:rgba(255,255,255,0.9); margin:0;" id="sc-emergency-reason">Gejala ini
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3929:              
+  dapat mengindikasikan kondisi serius. Segera hubungi 119 atau kunjungi IGD terdekat.</p>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3930:            
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3931:            
+<a href="tel:119">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3932:              
+<button
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3933:              
+  style="padding:.875rem 1.75rem; background:#fff; border:none; color:#dc2626; font-weight:900; font-size:14px; 
+border-radius:12px; cursor:pointer; display:flex; align-items:center; gap:.5rem; box-shadow:0 4px 16px 
+rgba(0,0,0,0.2);">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3934:              
+  📞 Hubungi 119
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3935:              
+</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3936:            
+</a>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3937:          
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3938:        </div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3939:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3940:        <!-- 
+══ 1. PROFIL PASIEN ════════════════════════════════════ -->
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3941:        <div 
+class="sc-glass sc-fade-in" style="animation-delay:.05s;">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3942:          
+<div class="sc-section-header">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3943:            
+<div class="sc-icon-box"><span class="material-symbols-outlined"
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3944:              
+  style="color:#fff; font-size:22px; font-variation-settings:'FILL' 1;">person</span></div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3945:            
+<div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3946:              
+<h3 class="sc-section-title">Profil Pasien</h3>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3947:              
+<p class="sc-section-sub">Informasi dasar untuk analisis yang lebih akurat</p>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3948:            
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3949:          
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3950:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3951:          
+<!-- Row 1: Basic info -->
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3952:          
+<div class="sc-profile-grid" style="margin-bottom:1.25rem;">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3953:            
+<div class="sc-form-group">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3954:              
+<label class="sc-label">Usia</label>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3955:              
+<input id="input-usia" class="sc-input" type="number" value="25" min="1" max="120" placeholder="25" />
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3956:            
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3957:            
+<div class="sc-form-group">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3958:              
+<label class="sc-label">Tinggi (cm)</label>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3959:              
+<input id="sc-tinggi" class="sc-input" type="number" value="165" min="50" max="250" placeholder="165" />
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3960:            
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3961:            
+<div class="sc-form-group">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3962:              
+<label class="sc-label">Berat (kg)</label>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3963:              
+<input id="sc-berat" class="sc-input" type="number" value="60" min="10" max="300" placeholder="60" />
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3964:            
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3965:            
+<div class="sc-form-group">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3966:              
+<label class="sc-label">Alergi Obat</label>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3967:              
+<input id="sc-alergi" class="sc-input" type="text" placeholder="Contoh: Penisilin, Aspirin" />
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3968:            
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3969:          
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3970:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3971:          
+<!-- Jenis Kelamin -->
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3972:          
+<div style="margin-bottom:1.25rem;">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3973:            
+<label class="sc-label" style="display:block; margin-bottom:.625rem;">Jenis Kelamin</label>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3974:            
+<div class="sc-radio-group">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3975:              
+<button class="sc-radio-btn active" onclick="scSelectGender(this,'Laki-laki')" id="sc-jk-pria">👨
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3976:              
+  Pria</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3977:              
+<button class="sc-radio-btn" onclick="scSelectGender(this,'Perempuan')" id="sc-jk-wanita">👩
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3978:              
+  Wanita</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3979:            
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3980:            
+<input type="hidden" id="pilih-jk" value="Laki-laki" />
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3981:          
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3982:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3983:          
+<!-- Riwayat Penyakit -->
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3984:          
+<div style="margin-bottom:1.25rem;">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3985:            
+<label class="sc-label" style="display:block; margin-bottom:.625rem;">Riwayat Penyakit</label>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3986:            
+<div class="sc-checkbox-group" id="sc-riwayat-group">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3987:              
+<button class="sc-checkbox-btn" onclick="scToggleCheck(this,'riwayat')">🫀 Hipertensi</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3988:              
+<button class="sc-checkbox-btn" onclick="scToggleCheck(this,'riwayat')">🩸 Diabetes</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3989:              
+<button class="sc-checkbox-btn" onclick="scToggleCheck(this,'riwayat')">❤️ Penyakit Jantung</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3990:              
+<button class="sc-checkbox-btn" onclick="scToggleCheck(this,'riwayat')">🫁 Asma</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3991:              
+<button class="sc-checkbox-btn" onclick="scToggleCheck(this,'riwayat')">🧪 Kolesterol</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3992:              
+<button class="sc-checkbox-btn" onclick="scToggleCheck(this,'riwayat')" data-none="true">🚫 Tidak
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3993:              
+  Ada</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3994:            
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3995:          
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3996:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3997:          
+<!-- Kondisi Khusus -->
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3998:          
+<div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:3999:            
+<label class="sc-label" style="display:block; margin-bottom:.625rem;">Kondisi Khusus</label>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4000:            
+<div class="sc-checkbox-group" id="sc-kondisi-group">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4001:              
+<button class="sc-checkbox-btn" onclick="scToggleCheck(this,'kondisi')">🤰 Hamil</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4002:              
+<button class="sc-checkbox-btn" onclick="scToggleCheck(this,'kondisi')">🤱 Menyusui</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4003:              
+<button class="sc-checkbox-btn" onclick="scToggleCheck(this,'kondisi')" data-none="true">🚫 Tidak
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4004:              
+  Ada</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4005:            
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4006:          
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4007:        </div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4008:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4009:        <!-- 
+══ 2. INPUT GEJALA ════════════════════════════════════ -->
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4010:        <div 
+class="sc-glass sc-fade-in" style="animation-delay:.1s;">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4011:          
+<div class="sc-section-header">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4012:            
+<div class="sc-icon-box" style="background:linear-gradient(135deg,#0891b2,#0e7490);"><span
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4013:              
+  class="material-symbols-outlined"
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4014:              
+  style="color:#fff; font-size:22px; font-variation-settings:'FILL' 1;">medical_services</span></div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4015:            
+<div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4016:              
+<h3 class="sc-section-title">Input Gejala</h3>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4017:              
+<p class="sc-section-sub">Pilih kategori dan gejala yang Anda rasakan</p>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4018:            
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4019:          
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4020:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4021:          
+<!-- Deskripsi bebas -->
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4022:          
+<div style="margin-bottom:1.25rem;">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4023:            
+<label class="sc-label" style="display:block; margin-bottom:.5rem;">📝 Deskripsi Gejala (opsional)</label>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4024:            
+<textarea id="symptoms" class="sc-input" style="width:100%; min-height:80px; resize:vertical;"
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4025:              
+placeholder="Ceritakan gejala Anda dengan bahasa sendiri..."></textarea>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4026:          
+</div>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4027:
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4028:          
+<!-- Category Tabs -->
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4029:          
+<div class="sc-cat-tabs" id="sc-cat-tabs">
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4030:            
+<button class="sc-cat-tab active" onclick="scSetCategory('semua',this)">🔍 Semua</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4031:            
+<button class="sc-cat-tab" onclick="scSetCategory('umum',this)">🤒 Umum</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4032:            
+<button class="sc-cat-tab" onclick="scSetCategory('pernapasan',this)">🫁 Pernapasan</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4033:            
+<button class="sc-cat-tab" onclick="scSetCategory('jantung',this)">🫀 Jantung</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4034:            
+<button class="sc-cat-tab" onclick="scSetCategory('kepala',this)">🧠 Saraf & Kepala</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4035:            
+<button class="sc-cat-tab" onclick="scSetCategory('pencernaan',this)">🤢 Pencernaan</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4036:            
+<button class="sc-cat-tab" onclick="scSetCategory('tulang',this)">🦴 Tulang & Sendi</button>
+  D:\PROJECT LASTMILE\project\ai-healthcare-assistant - neww - Copy (2) - Copy\templates\index.html:4037:            
+<button class="sc-cat-tab" onclick="scSetCategory('kulit',this)">🧴 Kulit</button>
+
+

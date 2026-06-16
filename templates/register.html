@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daftar - Medika AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="{{ url_for('static', filename='js/tailwind_config.js') }}"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .auth-glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed">
+<main class="flex min-h-screen">
+<!-- Left Side: Visual/Branding -->
+<section class="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-primary items-center justify-center">
+<!-- Background Image (diganti sesuai karakter1.png) -->
+<div class="absolute inset-0 z-0 overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-luminosity" style="object-position: 50% 0%;" data-alt="Latar belakang karakter Medika AI" src="{{ url_for('static', filename='karakter1.png') }}"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary via-primary/40 to-transparent"></div>
+</div>
+
+<!-- Content Overlay -->
+<div class="relative z-10 p-xl max-w-2xl text-on-primary">
+<div class="flex items-center gap-base mb-lg">
+<span class="material-symbols-outlined text-4xl" data-icon="health_and_safety">health_and_safety</span>
+<h1 class="font-headline-md text-headline-md tracking-tight">Medika AI</h1>
+</div>
+<h2 class="font-headline-xl text-headline-xl mb-md leading-tight">Masa Depan Kesehatan Ada di Tangan Anda.</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed leading-relaxed">
+                    Bergabunglah dengan ekosistem kesehatan cerdas yang didukung oleh AI untuk diagnosa yang lebih cepat, akurat, dan personal.
+                </p>
+<div class="mt-xl grid grid-cols-2 gap-md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="verified">verified</span>
+<span class="font-label-md text-label-md">Terverifikasi Klinis</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="security">security</span>
+<span class="font-label-md text-label-md">Keamanan Data Terjamin</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Right Side: Registration Form -->
+<section class="w-full lg:w-1/2 flex items-center justify-center p-gutter sm:p-lg md:p-xl bg-surface-container-lowest">
+<div class="w-full max-w-[480px]">
+<!-- Mobile Logo -->
+<div class="lg:hidden flex items-center gap-base mb-lg justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="health_and_safety">health_and_safety</span>
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">Medika AI</h1>
+</div>
+<div class="mb-xl text-center lg:text-left">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Buat Akun Baru</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Daftarkan username dan password Anda.</p>
+</div>
+
+<form class="space-y-md" action="{{ url_for('register') }}" method="POST" id="register-form">
+  {% if error %}
+    <div class="mb-md rounded DEFAULT border border-outline-variant bg-red-50 p-md text-error text-sm" role="alert">
+      {{ error }}
+    </div>
+  {% endif %}
+
+  <!-- Username -->
+  <div class="space-y-xs">
+    <label class="font-label-md text-label-md text-on-surface-variant ml-xs" for="username">Nama Pengguna</label>
+    <div class="relative group">
+      <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">person</span>
+      <input class="w-full pl-12 pr-4 py-3 bg-surface border border-outline-variant rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-body-md placeholder:text-outline" id="username" name="username" placeholder="contoh: budi" type="text" required/>
+    </div>
+  </div>
+
+  <!-- Password -->
+  <div class="space-y-xs">
+    <label class="font-label-md text-label-md text-on-surface-variant ml-xs" for="password">Kata Sandi</label>
+    <div class="relative group">
+      <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors" data-icon="lock">lock</span>
+      <input class="w-full pl-12 pr-12 py-3 bg-surface border border-outline-variant rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-body-md placeholder:text-outline" id="password" name="password" placeholder="minimal 4 karakter" type="password" required minlength="4"/>
+      <button class="absolute right-4 top-1/2 -translate-y-1/2 text-outline hover:text-primary transition-colors" type="button" onclick="togglePassword()">
+        <span class="material-symbols-outlined text-[20px]" data-icon="visibility">visibility</span>
+      </button>
+    </div>
+  </div>
+
+  <button class="w-full bg-primary text-on-primary font-headline-md py-4 rounded-xl shadow-lg hover:bg-on-primary-fixed-variant active:scale-[0.98] transition-all flex items-center justify-center gap-base mt-md" type="submit">
+    Daftar Akun
+    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+  </button>
+</form>
+
+<div class="mt-xl text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Sudah punya akun?
+                        <a class="text-primary font-bold hover:underline ml-xs transition-all" href="{{ url_for('login_page') }}">Masuk</a>
+</p>
+</div>
+</div>
+</section>
+</main>
+
+<!-- Background Decoration Micro-interactions -->
+<div class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
+<div class="absolute -top-[10%] -right-[5%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="absolute -bottom-[10%] -left-[5%] w-[40%] h-[40%] bg-tertiary/5 rounded-full blur-[120px]"></div>
+</div>
+
+<script>
+  function togglePassword(){
+    const pwd = document.getElementById('password');
+    if(!pwd) return;
+    pwd.type = pwd.type === 'password' ? 'text' : 'password';
+  }
+
+  // Input focus effects & transitions
+  document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('focus', () => {
+      if (input.parentElement && input.parentElement.parentElement) {
+        input.parentElement.parentElement.classList.add('scale-[1.01]');
+      }
+    });
+    input.addEventListener('blur', () => {
+      if (input.parentElement && input.parentElement.parentElement) {
+        input.parentElement.parentElement.classList.remove('scale-[1.01]');
+      }
+    });
+  });
+</script>
+  <!-- Card Animations Script -->
+  <script src="{{ url_for('static', filename='js/card_animations.js') }}"></script>
+</body></html>
+
